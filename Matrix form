@@ -1,0 +1,21 @@
+#include<stdio.h>
+void main()
+{
+char a[10]="KOHLI";
+char b[10]="ROHIT";
+char c [10]="VIJAY";
+{
+pf("%c",a[i]);
+}
+pf("\n")
+for(i=0;i<5;i++)
+{
+pf("- %c",b[i]);
+}
+pf("\n");
+for(i=0;i<5;i++)
+{
+pf("-%c",c[i]);
+}
+pf("\n");
+}
