@@ -1,0 +1,17 @@
+#include<stdio.h>
+void main()
+{
+char name[10][10];
+int a;
+printf("enter no.of names");
+scanf("%d",&a);
+for(int i=0;i<a;i++)
+{
+scanf("%s",names[i]);
+}
+printf("\n names as followa...");
+for(i=0;i<a;i++)
+{
+printf("\n name %d.%s",i+1,names[i]);
+}
+}
