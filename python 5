@@ -1,0 +1,19 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy.stats import linregress
+
+def load_data(filename):
+    """Load the sea level data from a CSV file."""
+    return pd.read_csv(filename)
+
+def draw_sea_level_plot(data):
+    """Draw a scatter plot of the data and a line of best fit for past and future predictions."""
+    
+    # Scatter plot of historical data
+    plt.figure(figsize=(14, 7))
+    plt.scatter(data['Year'], data['CSIRO Adjusted Sea Level'], color='blue', label='Historical data')
+
+    # Perform linear regression on the entire dataset
+    regression = linregress(data['Year'], data['CSIRO Adjusted Sea Level'])
+    years_extended = pd.Series(range(data['Year'].min(), 2051))
+    sea_level_extended = regression.intercept + regression.slope * years
