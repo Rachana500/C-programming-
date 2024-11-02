@@ -1,0 +1,25 @@
+import pandas as pd
+
+def load_data(filename):
+    """Load the data from a CSV file."""
+    return pd.read_csv(filename)
+
+def calculate_average_age(data):
+    """Calculate the average age."""
+    return data['age'].mean()
+
+def race_count(data):
+    """Calculate the count of each race in the dataset."""
+    return data['race'].value_counts()
+
+def percentage_higher_education_rich(data):
+    """Calculate the percentage of people with higher education earning >50K."""
+    higher_education = data[data['education'].isin(['Bachelors', 'Masters', 'Doctorate'])]
+    percentage = (higher_education[higher_education['salary'] == '>50K'].shape[0] / higher_education.shape[0]) * 100
+    return percentage
+
+def min_work_hours(data):
+    """Calculate the minimum number of hours worked per week."""
+    return data['hours-per-week'].min()
+
+# Add more functions here as needed.
