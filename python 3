@@ -1,0 +1,11 @@
+from medical_data_visualizer import *
+
+# Load the data
+data = load_data("medical_data.csv")
+
+# Generate visualizations
+draw_age_distribution(data)
+draw_bmi_vs_cholesterol(data)
+draw_correlation_heatmap(data)
+
+# Add calls to other visualizations as needed for testing.
