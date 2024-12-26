@@ -1,0 +1,52 @@
+myheader.h
+-------------
+void accept(int a[10][10],int r,int c)
+{
+	 int i,j;
+	  for(i=0;i<r;i++)
+	  {
+	  	 for(j=0;j<c;j++)
+	  	 {
+	  	 	  scanf("%d",&a[i][j]);
+		   }
+	  }
+}
+void display(int a[10][10],int r,int c)
+{
+	int i,j;
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			printf("%d ",a[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+void transpose(int a[10][10],int r,int c)
+{
+	 int i,j;
+	 
+	 for(i=0;i<c;i++)
+	 {
+	 	for(j=0;j<r;j++)
+	 	{
+	 		printf("%d ",a[j][i]);
+		 }
+		 printf("\n");
+	 }
+}
+void matrixAddition(int a[10][10],int b[10][10],
+int res[10][10],int r,int c)
+{
+	int i,j;
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			res[i][j] = a[i][j] + b[i][j];
+		}
+	}
+	
+}
