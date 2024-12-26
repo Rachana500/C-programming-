@@ -1,0 +1,27 @@
+p22.c
+------
+#include "stdio.h"
+#include "myheader.h"
+int main()
+{
+	int a[10][10],b[10][10],res[10][10];
+	int r,c;
+	printf("\nEnter the order of the matrix");
+	scanf("%d%d",&r,&c);
+	printf("\nEnter the values in matrix a\n");
+	accept(a,r,c);
+	printf("\nEnter the values in matrix b\n");
+	accept(b,r,c);
+
+    matrixAddition(a,b,res,r,c);
+		
+	printf("\nThe matrix A is \n");
+	display(a,r,c);
+	printf("\nThe matrix B is \n");
+	display(b,r,c);
+		printf("\nThe matrix res is \n");
+	display(res,r,c);
+	
+	
+	return 0;
+}
